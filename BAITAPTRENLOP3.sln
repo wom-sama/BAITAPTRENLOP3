@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAITAPTRENLOP3", "BAITAPTRENLOP3\BAITAPTRENLOP3.csproj", "{F25B6894-A0A4-4F1A-B053-3C076CC564C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTTL_4_2", "BTTL_4_2\BTTL_4_2.csproj", "{6694E6FB-8616-4876-8E4B-C1C29A523CFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F25B6894-A0A4-4F1A-B053-3C076CC564C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25B6894-A0A4-4F1A-B053-3C076CC564C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25B6894-A0A4-4F1A-B053-3C076CC564C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25B6894-A0A4-4F1A-B053-3C076CC564C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6694E6FB-8616-4876-8E4B-C1C29A523CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6694E6FB-8616-4876-8E4B-C1C29A523CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6694E6FB-8616-4876-8E4B-C1C29A523CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6694E6FB-8616-4876-8E4B-C1C29A523CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A70DD352-8E2B-4EF0-B3B3-E410A1DDD9E0}
+	EndGlobalSection
+EndGlobal
