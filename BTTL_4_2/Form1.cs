@@ -109,9 +109,64 @@ namespace BTTL_4_2
 
             // Chọn mặc định là QTKD
             cmbCN.SelectedIndex = 0;
-            
+
             txtTongNam.Text = "0";
             txtTongNu.Text = "0";
+
+            // Thiết lập DataGridView bằng 10 cột
+            dataStudent.ColumnCount = 5;
+            dataStudent.Columns[0].Name = "MSSV";
+            dataStudent.Columns[1].Name = "HoTen";
+            dataStudent.Columns[2].Name = "GT";
+            dataStudent.Columns[3].Name = "DTB";
+            dataStudent.Columns[4].Name = "Khoa";
+            dataStudent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataStudent.MultiSelect = false;
+            dataStudent.AllowUserToAddRows = false;
+            dataStudent.ReadOnly = true;
+            dataStudent.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataStudent.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataStudent.RowHeadersVisible = false;
+            dataStudent.AllowUserToResizeRows = false;
+            dataStudent.AllowUserToResizeColumns = false;
+            dataStudent.AllowUserToOrderColumns = false;
+            dataStudent.AllowUserToDeleteRows = false;
+            dataStudent.AllowUserToAddRows = false;
+            dataStudent.BackgroundColor = Color.White;
+            dataStudent.GridColor = Color.LightGray;    
+            dataStudent.BorderStyle = BorderStyle.None;
+            dataStudent.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataStudent.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataStudent.EnableHeadersVisualStyles = false;
+            dataStudent.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dataStudent.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dataStudent.ColumnHeadersDefaultCellStyle.Font = new Font(dataStudent.Font, FontStyle.Bold);
+            dataStudent.DefaultCellStyle.SelectionBackColor = Color.LightGray;
+            dataStudent.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dataStudent.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataStudent.RowTemplate.Height = 30;
+            dataStudent.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+            dataStudent.Rows.Add("123", "Nguyễn Văn A", "Nam", "8.5", "CNTT");
+            dataStudent.Rows.Add("124", "Trần Thị B", "Nữ", "9.0", "QTKD");
+            TinhTongSV();
+            dataStudent.Rows.Add("125", "Lê Văn C", "Nam", "7.5", "CNTT");
+            TinhTongSV();
+            dataStudent.Rows.Add("126", "Phạm Thị D", "Nữ", "8.0", "QTKD");
+            TinhTongSV();
+            dataStudent.Rows.Add("127", "Hoàng Văn E", "Nam", "6.5", "CNTT");
+            TinhTongSV();
+            dataStudent.Rows.Add("128", "Đỗ Thị F", "Nữ", "9.5", "QTKD");
+            TinhTongSV();
+            dataStudent.Rows.Add("129", "Vũ Văn G", "Nam", "7.0", "CNTT");
+            TinhTongSV();
+            dataStudent.Rows.Add("130", "Bùi Thị H", "Nữ", "8.8", "QTKD");
+            TinhTongSV();
+            dataStudent.Rows.Add("131", "Đặng Văn I", "Nam", "6.8", "CNTT");
+            TinhTongSV();
+            dataStudent.Rows.Add("132", "Ngô Thị K", "Nữ", "9.2", "QTKD");
+            TinhTongSV();
+            dataStudent.ClearSelection();
+
         }
 
         private void butXoa_Click(object sender, EventArgs e)
@@ -160,11 +215,20 @@ namespace BTTL_4_2
                 txtHoTen.Text = row.Cells["HoTen"].Value?.ToString();
                 txtDTB.Text = row.Cells["DTB"].Value?.ToString();
                 cmbCN.Text = row.Cells["Khoa"].Value?.ToString();
-                
+
 
                 string gt = row.Cells["GT"].Value?.ToString();
                 if (gt == "Nam") radNam.Checked = true;
                 else radNu.Checked = true;
+            }
+        }
+
+        private void txtMSSV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Chỉ cho nhập số và phím điều khiển
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
