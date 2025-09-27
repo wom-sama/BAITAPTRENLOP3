@@ -65,7 +65,7 @@ namespace BTTL_4_2
             // Kiểm tra nhập liệu
             if (mssv == "" || hoten == "" || dtb == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo");
                 return;
             }
 
@@ -84,7 +84,7 @@ namespace BTTL_4_2
             {
                 // Thêm mới
                 dataStudent.Rows.Add(mssv, hoten, gioitinh, dtb, khoa);
-                MessageBox.Show("Thêm mới dữ liệu thành công!");
+                MessageBox.Show("Thêm mới dữ liệu thành công!", "Thông báo");
             }
             else
             {
@@ -93,7 +93,7 @@ namespace BTTL_4_2
                 foundRow.Cells["GT"].Value = gioitinh;
                 foundRow.Cells["DTB"].Value = dtb;
                 foundRow.Cells["Khoa"].Value = khoa;
-                MessageBox.Show("Cập nhật dữ liệu thành công!");
+                MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo");
             }
 
             TinhTongSV();
@@ -148,22 +148,88 @@ namespace BTTL_4_2
             dataStudent.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
             dataStudent.Rows.Add("123", "Nguyễn Văn A", "Nam", "8.5", "CNTT");
             dataStudent.Rows.Add("124", "Trần Thị B", "Nữ", "9.0", "QTKD");
-            TinhTongSV();
+      
             dataStudent.Rows.Add("125", "Lê Văn C", "Nam", "7.5", "CNTT");
-            TinhTongSV();
+       
             dataStudent.Rows.Add("126", "Phạm Thị D", "Nữ", "8.0", "QTKD");
-            TinhTongSV();
+       
             dataStudent.Rows.Add("127", "Hoàng Văn E", "Nam", "6.5", "CNTT");
-            TinhTongSV();
+          
             dataStudent.Rows.Add("128", "Đỗ Thị F", "Nữ", "9.5", "QTKD");
-            TinhTongSV();
+           
             dataStudent.Rows.Add("129", "Vũ Văn G", "Nam", "7.0", "CNTT");
-            TinhTongSV();
+          
             dataStudent.Rows.Add("130", "Bùi Thị H", "Nữ", "8.8", "QTKD");
-            TinhTongSV();
+        
             dataStudent.Rows.Add("131", "Đặng Văn I", "Nam", "6.8", "CNTT");
-            TinhTongSV();
+      
             dataStudent.Rows.Add("132", "Ngô Thị K", "Nữ", "9.2", "QTKD");
+
+            dataStudent.Rows.Add("133", "Trịnh Văn L", "Nam", "7.8", "CNTT");
+            dataStudent.Rows.Add("134", "Lý Thị M", "Nữ", "8.3", "QTKD"); 
+            dataStudent.Rows.Add("135", "Phan Văn N", "Nam", "6.9", "CNTT"); 
+            dataStudent.Rows.Add("136", "Cao Thị O", "Nữ", "9.1", "QTKD"); 
+            dataStudent.Rows.Add("137", "Trương Văn P", "Nam", "7.2", "CNTT"); 
+            dataStudent.Rows.Add("138", "Hồ Thị Q", "Nữ", "8.7", "QTKD"); 
+            dataStudent.Rows.Add("139", "Võ Văn R", "Nam", "6.6", "CNTT"); 
+            dataStudent.Rows.Add("140", "Đinh Thị S", "Nữ", "9.3", "QTKD"); 
+            dataStudent.Rows.Add("141", "Lâm Văn T", "Nam", "7.4", "CNTT"); 
+            dataStudent.Rows.Add("142", "Tạ Thị U", "Nữ", "8.9", "QTKD"); 
+            dataStudent.Rows.Add("143", "Trần Văn V", "Nam", "6.7", "CNTT"); 
+            dataStudent.Rows.Add("144", "Nguyễn Thị W", "Nữ", "9.4", "QTKD"); 
+            dataStudent.Rows.Add("145", "Lê Văn X", "Nam", "7.6", "CNTT"); 
+            dataStudent.Rows.Add("146", "Phạm Thị Y", "Nữ", "8.4", "QTKD"); 
+            dataStudent.Rows.Add("147", "Hoàng Văn Z", "Nam", "6.8", "CNTT"); 
+            dataStudent.Rows.Add("148", "Đỗ Thị A1", "Nữ", "9.0", "QTKD"); 
+            dataStudent.Rows.Add("149", "Vũ Văn B1", "Nam", "7.1", "CNTT"); 
+            dataStudent.Rows.Add("150", "Bùi Thị C1", "Nữ", "8.6", "QTKD"); 
+            dataStudent.Rows.Add("151", "Đặng Văn D1", "Nam", "6.9", "CNTT"); 
+            dataStudent.Rows.Add("152", "Ngô Thị E1", "Nữ", "9.2", "QTKD"); 
+            dataStudent.Rows.Add("153", "Trịnh Văn F1", "Nam", "7.3", "CNTT"); 
+            dataStudent.Rows.Add("154", "Lý Thị G1", "Nữ", "8.8", "QTKD"); 
+            dataStudent.Rows.Add("155", "Phan Văn H1", "Nam", "6.5", "CNTT"); 
+            dataStudent.Rows.Add("156", "Cao Thị I1", "Nữ", "9.1", "QTKD"); 
+            dataStudent.Rows.Add("157", "Trương Văn J1", "Nam", "7.4", "CNTT"); 
+            dataStudent.Rows.Add("158", "Hồ Thị K1", "Nữ", "8.5", "QTKD"); 
+            dataStudent.Rows.Add("159", "Võ Văn L1", "Nam", "6.7", "CNTT"); 
+            dataStudent.Rows.Add("160", "Đinh Thị M1", "Nữ", "9.3", "QTKD"); 
+            dataStudent.Rows.Add("161", "Lâm Văn N1", "Nam", "7.2", "CNTT"); 
+            dataStudent.Rows.Add("162", "Tạ Thị O1", "Nữ", "8.9", "QTKD"); 
+            dataStudent.Rows.Add("163", "Trần Văn P1", "Nam", "6.8", "CNTT"); 
+            dataStudent.Rows.Add("164", "Nguyễn Thị Q1", "Nữ", "9.4", "QTKD"); 
+            dataStudent.Rows.Add("165", "Lê Văn R1", "Nam", "7.5", "CNTT"); 
+            dataStudent.Rows.Add("166", "Phạm Thị S1", "Nữ", "8.2", "QTKD"); 
+            dataStudent.Rows.Add("167", "Hoàng Văn T1", "Nam", "6.6", "CNTT"); 
+            dataStudent.Rows.Add("168", "Đỗ Thị U1", "Nữ", "9.1", "QTKD"); 
+            dataStudent.Rows.Add("169", "Vũ Văn V1", "Nam", "7.3", "CNTT"); 
+            dataStudent.Rows.Add("170", "Bùi Thị W1", "Nữ", "8.7", "QTKD"); 
+            dataStudent.Rows.Add("171", "Đặng Văn X1", "Nam", "6.9", "CNTT"); 
+            dataStudent.Rows.Add("172", "Ngô Thị Y1", "Nữ", "9.2", "QTKD"); 
+            dataStudent.Rows.Add("173", "Trịnh Văn Z1", "Nam", "7.4", "CNTT");
+            dataStudent.Rows.Add("174", "Lý Thị A2", "Nữ", "8.5", "QTKD"); 
+            dataStudent.Rows.Add("175", "Phan Văn B2", "Nam", "6.7", "CNTT"); 
+            dataStudent.Rows.Add("176", "Cao Thị C2", "Nữ", "9.3", "QTKD"); 
+            dataStudent.Rows.Add("177", "Trương Văn D2", "Nam", "7.1", "CNTT"); 
+                
+            dataStudent.Rows.Add("178", "Hồ Thị E2", "Nữ", "8.6", "QTKD"); 
+            dataStudent.Rows.Add("179", "Võ Văn F2", "Nam", "6.8", "CNTT"); 
+            dataStudent.Rows.Add("180", "Đinh Thị G2", "Nữ", "9.0", "QTKD"); 
+            dataStudent.Rows.Add("181", "Lâm Văn H2", "Nam", "7.2", "CNTT"); 
+            dataStudent.Rows.Add("182", "Tạ Thị I2", "Nữ", "8.8", "QTKD"); 
+            dataStudent.Rows.Add("183", "Trần Văn J2", "Nam", "6.5", "CNTT"); 
+            dataStudent.Rows.Add("184", "Nguyễn Thị K2", "Nữ", "9.1", "QTKD"); 
+            dataStudent.Rows.Add("185", "Lê Văn L2", "Nam", "7.3", "CNTT"); 
+            dataStudent.Rows.Add("186", "Phạm Thị M2", "Nữ", "8.4", "QTKD"); 
+            dataStudent.Rows.Add("187", "Hoàng Văn N2", "Nam", "6.9", "CNTT"); 
+            dataStudent.Rows.Add("188", "Đỗ Thị O2", "Nữ", "9.2", "QTKD"); 
+            dataStudent.Rows.Add("189", "Vũ Văn P2", "Nam", "7.5", "CNTT"); 
+                
+            dataStudent.Rows.Add("190", "Bùi Thị Q2", "Nữ", "8.1", "QTKD"); 
+            dataStudent.Rows.Add("191", "Đặng Văn R2", "Nam", "6.6", "CNTT"); 
+            
+
+
+
             TinhTongSV();
             dataStudent.ClearSelection();
 
@@ -174,7 +240,7 @@ namespace BTTL_4_2
             string mssv = txtMSSV.Text.Trim();
             if (mssv == "")
             {
-                MessageBox.Show("Vui lòng nhập MSSV cần xóa!");
+                MessageBox.Show("Vui lòng nhập MSSV cần xóa!", "Thông báo");
                 return;
             }
 
@@ -190,7 +256,7 @@ namespace BTTL_4_2
 
             if (foundRow == null)
             {
-                MessageBox.Show("Không tìm thấy MSSV cần xóa!");
+                MessageBox.Show("Không tìm thấy MSSV cần xóa!", "Thông báo");
             }
             else
             {
@@ -200,7 +266,7 @@ namespace BTTL_4_2
                 if (result == DialogResult.Yes)
                 {
                     dataStudent.Rows.Remove(foundRow);
-                    MessageBox.Show("Xóa sinh viên thành công!");
+                    MessageBox.Show("Xóa sinh viên thành công!", "Thông báo");
                     TinhTongSV();
                 }
             }
